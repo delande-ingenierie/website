@@ -533,7 +533,7 @@ nav a.active { color: var(--primary); }
    BUREAU D'ÉTUDES
    ============================================================ */
 
-#bureau-etudes { padding: 5rem 1rem; }
+#bureau-etudes {  padding-top: 4rem; }
 
 .bureau-block {
   max-width:             var(--max-w);
@@ -575,6 +575,7 @@ nav a.active { color: var(--primary); }
 }
 
 .expe-image {
+  padding-top: 4rem;
   display: flex;
   justify-content: center; /* Centre horizontalement */
   align-items: center;     /* Centre verticalement */
@@ -630,6 +631,84 @@ footer {
   margin-top: 40px;
 }
 
+.partners-section {
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.carousel-container {
+  margin-top: 40px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: calc(200px * 10);
+  animation: scroll 25s linear infinite;
+}
+
+.partner-logo {
+  width: 200px;
+  padding: 0 40px;
+  flex-shrink: 0;
+  /* Modification ici pour aligner verticalement le contenu */
+  display: flex;
+  justify-content: center;
+}
+
+/* Style du lien pour empiler image et texte */
+.partner-logo a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none; /* Retire le soulignement */
+  color: inherit;        /* Garde la couleur de ton texte actuel */
+}
+
+.partner-logo img {
+  width: 100%;
+  height: 80px;         /* On fixe une hauteur pour que les textes soient alignés */
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;  /* Espace entre l'image et le nom */
+}
+
+/* Style du nom du partenaire */
+.partner-logo span {
+  font-size: 14px;      /* Taille discrète */
+  font-family: inherit; /* Utilise la police de ton site */
+  text-align: center;
+  display: block;
+  opacity: 0.8;
+}
+
+.partner-logo a:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Optionnel : changement de couleur du texte au survol */
+.partner-logo a:hover span {
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-200px * 5)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 
 /* ============================================================
    RESPONSIVE — MOBILE (max-width: 768px)
@@ -838,6 +917,80 @@ footer {
 
           <div class="bureau-image">
             <img src="./img/PPR.jpg" alt="Accompagnement des projets maritimes">
+          </div>
+        </div>
+      </section>
+
+      <section class="partners-section">
+
+          <h3 class="section-title">Nos Partenaires</h3>
+
+
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <!-- Bloc répétitif -->
+            <div class="partner-logo">
+              <a href="https://acri-in.fr/" target="_blank">
+                <img src="img/partners/acri-in.png" alt="Acri-in">
+                <span>Acri-in</span>
+              </a>
+            </div>
+            <div class="partner-logo">
+              <a href="https://pf.linkedin.com/company/anoha-a-solutions" target="_blank">
+                <img src="img/partners/anohatasolutions.png" alt="Anohaa solutions">
+                <span>Anohaa solutions</span>
+              </a>
+            </div>
+            <div class="partner-logo">
+              <a href="https://www.fenua-environnement.com/" target="_blank">
+                <img src="img/partners/fenuaenv.png" alt="Fenua Environnement">
+                <span>Fenua Environnement</span>
+              </a>
+            </div>
+            <div class="partner-logo">
+              <a href="https://www.ptpu.org/" target="_blank">
+                <img src="img/partners/ptpu.png" alt="PTPU">
+                <span>PTPU</span>
+              </a>
+            </div>
+            <div class="partner-logo">
+              <a href="https://www.etikpf.com/" target="_blank">
+                <img src="img/partners/etikpf.png" alt="Etik">
+                <span>Etik</span>
+              </a>
+            </div>
+
+            <!-- Doublon pour l'effet infini -->
+            <div class="partner-logo">
+              <a href="https://acri-in.fr/" target="_blank">
+                <img src="img/partners/acri-in.png" alt="Acri-in">
+                <span>Acri-in</span>
+              </a>
+            </div>
+            <div class="partner-logo">
+              <a href="https://pf.linkedin.com/company/anoha-a-solutions" target="_blank">
+                <img src="img/partners/anohatasolutions.png" alt="Anohaa solutions">
+                <span>Anohaa solutions</span>
+              </a>
+            </div>
+            <div class="partner-logo">
+              <a href="https://www.fenua-environnement.com/" target="_blank">
+                <img src="img/partners/fenuaenv.png" alt="Fenua Environnement">
+                <span>Fenua Environnement</span>
+              </a>
+            </div>
+            <div class="partner-logo">
+              <a href="https://www.ptpu.org/" target="_blank">
+                <img src="img/partners/ptpu.png" alt="PTPU">
+                <span>PTPU</span>
+              </a>
+            </div>
+            <div class="partner-logo">
+              <a href="https://www.etikpf.com/" target="_blank">
+                <img src="img/partners/etikpf.png" alt="Etik">
+                <span>Etik</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
