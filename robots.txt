@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Emplacement du sitemap
-Sitemap: https://delande-ingenierie.pf/sitemap.xml
+Sitemap: https://delande-ingenierie.com/sitemap.xml
